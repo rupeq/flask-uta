@@ -4,11 +4,22 @@
 <div class="row">
     <div class="col-md-12 text-center">
         <h1>Welcome to Universal Tech Academy.</h1>
-        {% if login %}
-            <h3>Let's get started.</h3>
+        {% if session['username'] %}
+            <h3>Programming is easy and intresting!</h3>
         {% else %}
             <p>Already registered? <a href='{{ url_for("login") }}'>Login</a></p>
         {% endif %}
+
+        <div style="text-align: left;">
+            <h2>Java</h2>
+            <p>Java is a write-once, run-anywhere programming language developed by Sun Microsystems. It is similar to C and C++ but a lot easier. You can combine Java with a lot of technologies like Spring, node js, Android, Hadoop, J2EE, etc… to build robust, scalable, portable and distributed full-fledged applications. Java also promotes continuous integration and testing using tools like Selenium.</p>
+            <h2>Python</h2>
+            <p>Python is a programming language written by a person called Guido van Rossum in the 1990s. Programming languages allow you to control what a computer does and the way it does it. Python is an excellent language for large or complex programming projects. Integral to programming in any language is making the code easy for the next programmer to read and maintain. It takes great effort to keep Perl and PHP programs readable. Where Perl gets unruly after 20 or 30 lines, Python remains neat and readable, making even the largest projects easy to manage.</p>
+            <h2>C</h2>
+            <p>C is a general-purpose programming language that is extremely popular, simple and flexible. It is machine-independent, structured programming language which is used extensively in various applications.
+
+                C was the basic language to write everything from operating systems (Windows and many others) to complex programs like the Oracle database, Git, Python interpreter and more.</p>
+        </div>
     </div>
 </div>
 {% endblock %}
